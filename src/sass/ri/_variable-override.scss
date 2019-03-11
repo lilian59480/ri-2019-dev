@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@import "../bulma/utilities/functions";
+
+$family-sans-serif: Lato, sans-serif;
+
+$family-sans-serif-secondary: Montserrat, sans-serif;
+$family-secondary: $family-sans-serif-secondary;
+
+$primary: rgb(1, 43, 90);
+$primary-invert: findColorInvert($primary);
+
+$transparent: transparent;
+$transparent-invert: rgb(255, 255, 255);
+
+$link: lighten($primary, 10%);
+$link-invert: findColorInvert($link);
+
+$custom-colors: (
+	"transparent-color": (
+		$transparent,
+		$transparent-invert
+	)
+);
+
+$size-1: 4.85410rem;
+$size-2: 2.42705rem;
+$size-3: 1.61803rem;
+$size-4: 1.21353rem;
+$size-5: 1.01127rem;
+$size-6: 1rem;
+$size-7: 0.809017rem;
+
+
+$timeline-icon-size: $size-4;
+$timeline-marker-icon-size: $size-2;

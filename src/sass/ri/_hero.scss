@@ -1,0 +1,45 @@
+.hero {
+	&.has-picture-students {
+		background: url("../assets/pictures/homepage.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top center;
+
+		.hero-body {
+			background-color: rgba($primary, 0.25);
+			color: $white;
+		}
+	}
+
+	&.has-picture-igii {
+		background: url("../assets/pictures/blur-ig2i.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+
+		.hero-body {
+			color: $white;
+
+			.container {
+				background-color: rgba($primary, 0.65);
+			}
+
+		}
+	}
+
+	.title {
+		font-size: $size-1;
+		color: $white;
+		@include mobile {
+			font-size: $size-2;
+		}
+	}
+	.subtitle {
+		font-size: $size-3;
+		color: $white;
+		@include mobile {
+			font-size: $size-4;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"name": "ig2i-ri-2019",
+	"version": "2019.0.0",
+	"description": "Rencontres IG2Iennes",
+	"main": "index.js",
+	"private": true,
+	"scripts": {
+		"build": "gulp",
+		"watch": "gulp watch"
+	},
+	"author": "IG2I",
+	"license": "",
+	"devDependencies": {
+		"autoprefixer": "^9.4.0",
+		"browser-sync": "^2.26.0",
+		"doiuse": "^4.2.0",
+		"gulp": "^4.0.0",
+		"gulp-postcss": "^8.0.0",
+		"gulp-sass": "^4.0.0",
+		"postcss-calc": "^7.0.0",
+		"stylelint": "^9.10.0",
+		"stylelint-config-standard": "^18.2.0"
+	}
+}
