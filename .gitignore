@@ -1,2 +1,3 @@
 # Remove build directory
 build/
+node_modules
