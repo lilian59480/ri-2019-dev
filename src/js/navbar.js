@@ -8,6 +8,9 @@ const navbarToggles = (element) => {
 	// Get the target from the "data-target" attribute
 	const target = document.getElementById(element.dataset.target);
 
+	element.parentElement.classList.toggle("navbar");
+	element.parentElement.classList.toggle("is-primary");
+
 	element.classList.toggle('is-active');
 	target.classList.toggle('is-active');
 }

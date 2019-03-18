@@ -1,5 +1,9 @@
 .navbar {
 	.navbar-brand {
+		&.navbar.is-primary {
+			transition: none;
+		}
+		
 		button {
 			background: none;
 			color: inherit;
