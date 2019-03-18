@@ -69,6 +69,16 @@ $slider-output-radius: $radius !default;
 			margin-left: -($thumb-size / 4);
 		}
 	}
+
+	+ .ticks {
+		padding: ($thumb-size / 4) ($thumb-size / 2);
+
+		.tick {
+			height: $size / 2;
+			line-height: $size * 3;
+			margin-top: -$size;
+		}
+	}
 }
 
 input[type="range"] {
@@ -278,42 +288,28 @@ input[type="range"] {
 
 		@include slider-size($size-normal);
 
-		+ ul {
-			list-style: none;
-			position: absolute;
-			width: 100%;
+		+ .ticks {
+			display: flex;
+			justify-content: space-between;
 
-			li {
-				position: absolute;
-				width: $size-normal / 2;
-				left: calc(var(--i) * 100%);
-				transform: translate(-50%) scale(0.9);
-				height: 1rem;
-
-				border: $slider-track-border;
-				border-radius: $slider-track-radius;
+			.tick {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				width: 1px;
 			}
 		}
 
 		&.is-small {
 			@include slider-size($size-small);
-			+ ul li {
-				width: $size-small;
-			}
 		}
 
 		&.is-medium {
 			@include slider-size($size-medium);
-			+ ul li {
-				width: $size-medium;
-			}
 		}
 
 		&.is-large {
 			@include slider-size($size-large);
-			+ ul li {
-				width: $size-large;
-			}
 		}
 
 		@each $name, $pair in $colors {
@@ -346,10 +342,28 @@ input[type="range"] {
 					}
 				}
 
-				+ ul li {
+				+ .ticks .tick {
 					background: $color;
+					color: $color;
 				}
 			}
 		}
 	}
 }
+
+// <div>
+// 	<input type="range" min="0" max="100" step="10" class="slider is-fullwidth is-primary">
+// 	<div class="ticks">
+// 		<span class="tick">0</span>
+// 		<span class="tick">1</span>
+// 		<span class="tick">2</span>
+// 		<span class="tick">3</span>
+// 		<span class="tick">4</span>
+// 		<span class="tick">5</span>
+// 		<span class="tick">6</span>
+// 		<span class="tick">7</span>
+// 		<span class="tick">8</span>
+// 		<span class="tick">9</span>
+// 		<span class="tick">10</span>
+// 	</div>
+// </div>
