@@ -1,0 +1,16 @@
+footer {
+    @media screen and (min-width: 1088px) {
+        .box {
+            height: 100%;
+
+            .second-box {
+                flex-direction: column;
+            }
+        }
+    }
+    .box {
+        .first-box {
+            margin-bottom: 0.625rem;
+        }
+    }
+}
