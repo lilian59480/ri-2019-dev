@@ -12,20 +12,43 @@
 	}
 
 	&.has-picture-igii {
-		background: url("../assets/pictures/blur-ig2i.jpg");
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-attachment: fixed;
+		overflow: visible;
+		position: relative;
+
+		@media screen and (min-width: 1472px) {
+			min-height: 50rem;
+		}
 
 		.hero-body {
 			color: $white;
 
-			.container {
-				background-color: rgba($primary, 0.65);
+			@media screen and (min-width: 1472px) {
+				padding-bottom: 0;
+				padding-top: 0;
+				display: flex;
+				
+				.container {
+					margin: auto;
+				}
 			}
 
+			.container {
+				background-color: rgba($primary, 0.55);
+			}
 		}
+	}
+
+	&-with-video {
+		overflow: hidden;
+		user-select: none;
+		touch-action: none;
+		pointer-events: none;
+
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		position: absolute;
 	}
 
 	.title {

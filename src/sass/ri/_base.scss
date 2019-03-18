@@ -1,3 +1,13 @@
 html {
 	scroll-behavior: smooth;
 }
+
+[data-object-fit=cover] {
+    object-fit: cover;
+}
+
+[data-object-fit] {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
