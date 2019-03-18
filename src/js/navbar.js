@@ -35,10 +35,17 @@ const scrollBackground = (element, scrollValue) => {
 window.addEventListener('load', () => {
 	// Get all "navbar-burger" elements
 	const navbarBurgers = document.getElementsByClassName('navbar-burger');
+	const navbarButtonsBurgers = document.getElementsByClassName('navbar-end');
 
 	Array.from(navbarBurgers).forEach((/** @type {HTMLElement} */ navbarElement) => {
 		navbarElement.addEventListener('click', () => {
 			navbarToggles(navbarElement);
+		});
+
+		Array.from(navbarButtonsBurgers).forEach((/** @type {HTMLElement} */ content) => {
+			content.addEventListener('click', () => {
+				navbarToggles(navbarElement);
+			});
 		});
 	});
 
