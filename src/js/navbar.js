@@ -7,7 +7,6 @@
 const navbarToggles = (element) => {
 	// Get the target from the "data-target" attribute
 	const target = document.getElementById(element.dataset.target);
-
 	element.parentElement.classList.toggle("navbar");
 	element.parentElement.classList.toggle("is-primary");
 
@@ -44,7 +43,8 @@ window.addEventListener('load', () => {
 
 		Array.from(navbarButtonsBurgers).forEach((/** @type {HTMLElement} */ content) => {
 			content.addEventListener('click', () => {
-				navbarToggles(navbarElement);
+				if (window.innerWidth < 1088)
+					navbarToggles(navbarElement);
 			});
 		});
 	});
