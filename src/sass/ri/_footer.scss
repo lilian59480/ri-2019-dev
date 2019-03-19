@@ -12,5 +12,12 @@ footer {
         .first-box {
             margin-bottom: 0.625rem;
         }
+
+        .second-box {
+            > a {
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
     }
 }
