@@ -15,8 +15,10 @@ footer {
 
         .second-box {
             > a {
-                overflow: hidden;
-                text-overflow: ellipsis;
+                @media screen and (max-width: 520px) {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
         }
     }
