@@ -19,3 +19,7 @@ const playVideoOnScroll = () => {
 window.addEventListener('scroll', () => {
     playVideoOnScroll();
 });
+
+window.addEventListener('load', () => {
+    document.querySelector("video").play();
+})
