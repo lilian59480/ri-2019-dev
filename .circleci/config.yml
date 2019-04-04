@@ -1,0 +1,49 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: node:10.15
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - run:
+          name: Build with Gulp
+          command: npm run build
+      - persist_to_workspace:
+          root: build/
+          paths: .
+  deploy:
+    docker:
+      - image: node:10.15
+    steps:
+      - checkout
+      - attach_workspace:
+          at: build
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - run:
+          name: Configure
+          command: |
+            git config user.email "lilian.petitpas@outlook.com"
+            git config user.name "Lilian Petitpas"
+      - add_ssh_keys:
+          fingerprints:
+            - "78:6a:9e:2b:0d:76:7a:81:ab:5e:9f:dc:dc:74:5b:4c"
+      - run:
+          name: Disable Jekyll
+          command: touch build/.nojekyll
+      - run:
+          name: Deploy
+          command: npm run deploy
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
+      - deploy
+

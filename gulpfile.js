@@ -49,11 +49,13 @@ gulp.task('browserSync', gulp.series((done) => {
 	done();
 }));
 
-gulp.task('watch', gulp.series(['browserSync', 'sass', 'js', 'assets', 'html'], () => {
+gulp.task('build', gulp.series(['sass', 'js', 'assets', 'html']));
+
+gulp.task('watch', gulp.series(['browserSync', 'build'], () => {
 	gulp.watch('src/sass/**/*.scss', gulp.series(['sass'], reload));
 	gulp.watch('src/js/**/*.js', gulp.series(['js'], reload));
 	gulp.watch('src/assets/**/*', gulp.series(['assets'], reload));
 	gulp.watch('src/html/**/*.html', gulp.series(['html'], reload));
 }));
 
-gulp.task('default', gulp.series(['sass', 'js', 'html']));
+gulp.task('default', gulp.series(['build']));
