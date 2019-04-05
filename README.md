@@ -1,6 +1,7 @@
 # Rencontres IG2Iennes 2019
 
-<!-- [Site](https://example.com) -->
+Build status: 
+[![CircleCI](https://circleci.com/gh/lilian59480/ri-2019-dev/tree/master.svg?style=svg)](https://circleci.com/gh/lilian59480/ri-2019-dev/tree/master)
 
 2019 version of Centrale Lille's Rencontres IG2Iennes website
 

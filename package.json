@@ -6,14 +6,16 @@
 	"private": true,
 	"scripts": {
 		"build": "gulp",
-		"watch": "gulp watch"
+		"watch": "gulp watch",
+		"deploy": "gh-pages --dotfiles --dist build/ --message '[skip ci] Create new build'"
 	},
 	"author": "IG2I",
 	"license": "",
 	"devDependencies": {
-		"autoprefixer": "^9.4.0",
+		"autoprefixer": "^9.5.0",
 		"browser-sync": "^2.26.0",
 		"doiuse": "^4.2.0",
+		"gh-pages": "^2.0.0",
 		"gulp": "^4.0.0",
 		"gulp-postcss": "^8.0.0",
 		"gulp-sass": "^4.0.0",
