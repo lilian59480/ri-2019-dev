@@ -14206,6 +14206,13 @@ footer .box .first-box {
   background-color: rgba(1, 43, 90, 0.55);
 }
 
+@media screen and (min-width: 1472px) {
+  .hero.has-picture-igii .hero-body .content-video {
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+  }
+}
+
 .hero-with-video {
   overflow: hidden;
   -webkit-user-select: none;
