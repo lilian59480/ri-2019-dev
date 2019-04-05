@@ -35,6 +35,13 @@
 			.container {
 				background-color: rgba($primary, 0.55);
 			}
+
+			.content-video {
+				@media screen and (min-width: 1472px) {
+					padding-top: 0.9375rem;
+					padding-bottom: 0.9375rem;
+				}
+			}
 		}
 	}
 
