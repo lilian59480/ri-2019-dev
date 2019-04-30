@@ -30,6 +30,11 @@ gulp.task('js', () => {
 		.pipe(gulp.dest('build/js/'));
 });
 
+gulp.task('cname', () => {
+	return gulp.src('CNAME')
+		.pipe(gulp.dest('build/'));
+});
+
 gulp.task('html', () => {
 	return gulp.src(['src/html/**/*.html'])
 		.pipe(gulp.dest('build/'));
@@ -49,7 +54,7 @@ gulp.task('browserSync', gulp.series((done) => {
 	done();
 }));
 
-gulp.task('build', gulp.series(['sass', 'js', 'assets', 'html']));
+gulp.task('build', gulp.series(['sass', 'js', 'assets', 'html', 'cname']));
 
 gulp.task('watch', gulp.series(['browserSync', 'build'], () => {
 	gulp.watch('src/sass/**/*.scss', gulp.series(['sass'], reload));
