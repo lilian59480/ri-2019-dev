@@ -14176,6 +14176,18 @@ footer .box .first-box {
   color: white;
 }
 
+.hero.has-picture-404 {
+  background: url("../assets/pictures/404.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.hero.has-picture-404 .hero-body {
+  background-color: rgba(1, 43, 90, 0.25);
+  color: white;
+}
+
 .hero.has-picture-igii {
   overflow: visible;
   position: relative;
