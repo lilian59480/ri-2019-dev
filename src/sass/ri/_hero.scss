@@ -11,6 +11,18 @@
 		}
 	}
 
+	&.has-picture-404 {
+		background: url("../assets/pictures/404.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top center;
+
+		.hero-body {
+			background-color: rgba($primary, 0.25);
+			color: $white;
+		}
+	}
+
 	&.has-picture-igii {
 		overflow: visible;
 		position: relative;
