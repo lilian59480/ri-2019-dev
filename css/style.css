@@ -12251,6 +12251,7 @@ label.panel-block:hover {
     -webkit-columns: 2;
     -moz-columns: 2;
     -webkit-column-gap: 0.1rem;
+       -moz-column-gap: 0.1rem;
             column-gap: 0.1rem;
   }
   .pricing-table.is-horizontal .pricing-plan .plan-footer {
