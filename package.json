@@ -13,7 +13,7 @@
 	"license": "",
 	"devDependencies": {
 		"autoprefixer": "^9.5.1",
-		"browser-sync": "^2.26.5",
+		"browser-sync": "^2.26.7",
 		"doiuse": "^4.2.0",
 		"gh-pages": "^2.0.0",
 		"gulp": "^4.0.2",
